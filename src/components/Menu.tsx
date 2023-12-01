@@ -2,20 +2,24 @@ import React from 'react'
 
 const Menu = () => {
   return (
-    <div className='flex flex-col p-8'>
+    <section className='flex flex-col w-fill h-1/8'>
+        
+        <div className='flex flex-row bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400'>
+          <h1 className='flex justify-center w-14 h-14 bg-white text-fuchsia-500 text-center font-bold p-2 m-4 text-4xl rounded-full'>#</h1>
 
-        <div className='space-y-2'>
-            <span className="block h-0.5 w-8 bg-gray-100"></span>
-            <span className="block h-0.5 w-8 bg-gray-100"></span>
-            <span className="block h-0.5 w-8 bg-gray-100"></span>
+          <h1 className='flex justify-center p-4 text-6xl text-white font-bold from-serif'>HUEGRAM</h1>
         </div>
 
-        <a href="" className="menulink text-gray-200 text-2xl my-4">Home</a>
-        <a href="" className="menulink text-gray-200 text-2xl my-4">Search</a>
-        <a href="" className="menulink text-gray-200 text-2xl my-4">Trending</a>
+        <div className="flex w-full bg-slate-800 h-0.5">
 
-    </div>
+        </div>
+
+       
+        
+    </section>
+
   )
+
 }
 
 export default Menu

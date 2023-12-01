@@ -14,10 +14,14 @@ function App() {
   ]);
 
   return (
-    <div className='flex bg-slate-800 h-screen'>
-      <Menu />
+    <div className='flex bg-slate-900 h-screen'>
+      <div className="flex flex-col">
+        <Menu />
 
-      <Main posts={posts}/>
+        <Main posts={posts}/>
+
+      </div>
+      
 
       <Profile />
     </div>
