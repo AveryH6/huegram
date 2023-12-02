@@ -1,4 +1,4 @@
-//import Menu from './components/Menu'
+import Menu from './components/Menu'
 import Main from './components/Main'
 import Profile from './components/Profile'
 import { useState } from 'react'
@@ -23,15 +23,20 @@ function App() {
   const addNewHue = (color:string ) => 
   {
       console.log(color)
-      const newHue = {color, username: currentUser.username, id: hues[hues.length-1].id+1 , likes:0};
-      setHues( [...hues, newHue ] );
+      const newHue = {color, username: currentUser.username, id: length+1 , likes:0};
+      setHues( [newHue, ...hues ] );
   }
 
   return (
     <div className='flex bg-slate-800 h-screen'>
-      {/* <Menu /> */}
+      
+      <div className="flex flex-col">
+        <Menu/>
 
-      <Main hues={hues} addHue = {addNewHue} />
+        <Main hues={hues} addHue = {addNewHue} />
+
+      </div>
+      
 
       <Profile />
     </div>

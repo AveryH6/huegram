@@ -1,5 +1,3 @@
-import React from "react";
-
 interface Post {
   color: string;
   username: string;
@@ -13,7 +11,7 @@ interface Props {
 const Post = (props: Props) => {
   return (
     <div
-      className="flex flex-col h-64 aspect-square rounded-3xl m-8 text-center justify-between items-center"
+      className="flex flex-col max-w-screen-3/4 h-64 aspect-square rounded-3xl m-8 text-center justify-between items-center"
       style={{ backgroundColor: props.post.color }}
     >
       <p className="text-white text-2xl opacity-80">{props.post.color}</p>
