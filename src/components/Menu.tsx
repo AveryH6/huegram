@@ -9,17 +9,17 @@ const Menu = () => {
 
             <h1 className='flex justify-center pt-4 pb-4 text-6xl text-white font-body'>Huegram</h1>
           </div>
-          <div className="flex h-8 text-end m-6">
+          <div className="flex h-8 text-end p-8">
             <form className="flex">
               <input
                 placeholder="Search Hues..."
-                className="rounded-xl bg-white p-4"
+                className="rounded-2xl bg-white p-4"
               />
             </form>
           </div>
         </div>
 
-        <div className="flex w-full bg-slate-800 h-0.5"></div>
+        <div className="flex w-full bg-[#151515] h-0.5"></div>
 
         
         

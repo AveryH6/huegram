@@ -3,12 +3,12 @@
 
 const Profile = () => {
   return (
-    <section className='flex flex-col w-1/4 border-2 p-8 justify-around items-center text-white'>
+    <section className='flex flex-col w-1/4 border-2 border-white p-8 justify-around items-center text-white'>
 
         <div>
-          <h1 className='flex pb-4 text-2xl'>@kavery</h1>
+          <h1 className='flex pb-2 text-3xl'>@kavery</h1>
           <div className="grid grid-cols-4 w-fit h-1/8 place-items-center border-black border-2">
-            <div className="h-10 w-10 bg-[#ffa500] border-2 border-white"></div>
+            <div className="h-10 w-10 bg-[#ffa500] border-2 border-[white]"></div>
             <div className="h-10 w-10 bg-[#ff8c00] border-2 border-white"></div>
             <div className="h-10 w-10 bg-[#ff7f50] border-2 border-white"></div>
             <div className="h-10 w-10 bg-[#ff6347] border-2 border-white"></div>
