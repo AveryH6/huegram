@@ -32,7 +32,7 @@ const Hue = (props: Props) => {
         
 
 
-      <div className={`bg-black text-${text_color} flex w-full text-center justify-center p-4 rounded-b-2xl opacity-95`}>
+      <div className={`bg-black text-white flex w-full text-center justify-center p-4 rounded-b-2xl opacity-95`}>
         <p className="text-xl">{props.hue.username}</p>
 
       </div>
