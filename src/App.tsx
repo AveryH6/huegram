@@ -1,11 +1,12 @@
 import Menu from './components/Menu'
 import Main from './components/Main'
 import Profile from './components/Profile'
+import HueObject from './HueObject'
 import { useState, useEffect } from 'react'
 
 function App() {
 
-  const [hues, setHues] = useState<Array<{id: number; color: string; username: string; likes: number}>>([]);
+  const [hues, setHues] = useState<HueObject[]>([]);
 
   useEffect( ()=>
   {
@@ -23,7 +24,7 @@ function App() {
   const addNewHue = (color:string ) => 
   {
       console.log(color)
-      const newHue = {color, username: currentUser.username, id: length+1 , likes:0};
+      const newHue = {color, username: currentUser.username, id: length+1 , likes:0, isLiked: false};
       setHues( [newHue, ...hues ] );
   }
 
