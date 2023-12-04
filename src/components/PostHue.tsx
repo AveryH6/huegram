@@ -17,7 +17,7 @@ const PostHue = (props:Props) => {
             <a href="#" onClick={ () => props.addHue(color)  } className="btn bg-white rounded-2xl text-cyan-950 text-center">Post</a>
         </div>
 
-        <Hue hue={ {color, username:"kaylee", likes:3}} />
+        <Hue hue={ {color, username:"kaylee", likes:3, isLiked:false, id:0}} />
 
     </div>
   )
