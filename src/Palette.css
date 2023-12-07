@@ -1,0 +1,16 @@
+.palette {
+    
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    aspect-ratio: 1/1;
+    min-width: 200px;
+    border: 1px solid rgb(55 65 81);
+    gap: 2px;
+
+}
+
+.palette > div {
+    background-color: rgba(255, 242, 242, 0);
+}

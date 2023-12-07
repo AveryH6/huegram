@@ -28,6 +28,19 @@ function App() {
       setHues( [newHue, ...hues ] );
   }
 
+  //Like button
+  const toggleLikeforHue = (id?:number) => 
+  {
+    // genterate new array of hues with modified hue
+    const newHues = [...hues]
+    const hue = newHues.find(h => h.id == id)
+    if(hue){
+      hue.isLiked = !hue.isLiked
+      setHues(newHues)
+    }
+  }
+
+
 
   return (
     <div className='flex bg-slate-900 h-screen'>
@@ -35,7 +48,7 @@ function App() {
       <div className="flex flex-col">
         <Menu/>
 
-        <Main hues={hues} addHue = {addNewHue} />
+        <Main hues={hues} addHue = {addNewHue} toggleLike = {toggleLikeforHue}/>
 
       </div>
       

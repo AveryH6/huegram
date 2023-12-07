@@ -4,20 +4,21 @@ import PostHue from './PostHue'
 
 interface Props {
     hues: HueObject[],
-    addHue: (color:string) => void
+    addHue: (color:string) => void,
+    toggleLike?: (id?:number) => void
 }
 
-const Main = (props : Props) => {
+const Main = ({hues, addHue, toggleLike} : Props) => {
   return (
     <div className='flex flex-row overflow-y-auto'>
         <div className='mt-[8rem] ml-16'>
-          <PostHue addHue={props.addHue}/>
+          <PostHue addHue={addHue}/>
         </div>
 
         <div className='flex flex-row flex-wrap max-w-screen-2xl justify-evenly p-8 gap-8 overflow-y-auto'>
-            {props.hues.map(  (hue) => ( 
+            {hues.map(  (hue) => ( 
                 
-                <Hue hue={hue}/>
+                <Hue hue={hue} toggleLike={toggleLike}/>
           ))}
         </div>
 
