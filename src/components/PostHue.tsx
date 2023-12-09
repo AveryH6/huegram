@@ -17,7 +17,7 @@ const PostHue = (props:Props) => {
         
         <div className='flex flex-col pt-[1rem] bg-gray-800 rounded-2xl w-full gap-4' style={{backgroundColor: color}}>
 
-          <div className="relative m-4 mr-6">
+          <div className="relative m-6">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pb-6 pointer-events-none">
               <svg className="w-6 h-6 mb-[2.75rem] text-lg text-gray-700" aria-hidden="true" fill="none" viewBox="0 0 20 20">
                 <FaHashtag />
