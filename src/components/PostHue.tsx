@@ -19,12 +19,12 @@ const PostHue = (props:Props) => {
 
           <div className="relative m-6">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pb-6 pointer-events-none">
-              <svg className="w-6 h-6 mb-[2.75rem] text-lg text-gray-700" aria-hidden="true" fill="none" viewBox="0 0 20 20">
+              <svg className="w-6 h-6 mb-[2rem] text-lg text-gray-700" aria-hidden="true" fill="none" viewBox="0 0 20 20">
                 <FaHashtag />
               </svg>
             </div>
             <input type="text" name="hue" id="hue" maxLength={6} minLength={6} placeholder='Hexcode' className='pl-[2.5rem] p-2 text-xl border-3 border-gray-700 hover:border-gray-700 rounded-3xl' onChange={ (event) => setColor(`#` + `${event.target.value}`) } ></input>
-            <button onClick={ () => props.addHue(color)  } className="btn w-[15rem] p-1 m-4 ml-[0.75rem] bg-white border-2 border-gray-500 rounded-2xl text-gray-700 text-center">Post</button>
+            <button onClick={ () => props.addHue(color)  } className="btn w-[16.25rem] p-1 mt-6 bg-white border-2 border-gray-500 rounded-3xl text-gray-700 text-center">Post</button>
           </div>
             
             
