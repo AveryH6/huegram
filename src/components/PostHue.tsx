@@ -23,8 +23,8 @@ const PostHue = (props:Props) => {
                 <FaHashtag />
               </svg>
             </div>
-            <input type="text" name="hue" id="hue" maxLength={6} minLength={6} placeholder='Hexcode' className='pl-[2.5rem] p-2 text-xl border-3 border-gray-700 hover:border-gray-700 rounded-3xl' onChange={ (event) => setColor(`#` + `${event.target.value}`) } ></input>
-            <button onClick={ () => props.addHue(color)  } className="btn w-[16.25rem] p-1 mt-6 bg-white border-2 border-gray-500 rounded-3xl text-gray-700 text-center">Post</button>
+            <input type="text" name="hue" id="hue" maxLength={6} minLength={6} placeholder='Hexcode' className='pl-[2.5rem] w-[16rem] p-2 text-xl border-3 border-gray-700 hover:border-gray-700 rounded-3xl' onChange={ (event) => setColor(`#` + `${event.target.value}`) } ></input>
+            <button onClick={ () => props.addHue(color)  } className="btn w-[16rem] p-1 mt-6 bg-white border-2 border-gray-500 rounded-3xl text-gray-700 text-center">Post</button>
           </div>
             
             
