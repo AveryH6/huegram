@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import Hue from './Hue'
+import { FaHashtag } from "react-icons/fa";
+
+
 
 interface Props{
     addHue: (color:string)=> void
@@ -10,14 +13,24 @@ const PostHue = (props:Props) => {
     const[color, setColor] = useState('')
 
   return (
-    <div className='flex flex-col w-fit h-fit p-8 justify-evenly gap-8 border-2 border-gray-700 rounded-3xl'>
+    <div className='flex flex-col w-fit h-fit p-8 justify-evenly items-center gap-8 border-2 border-gray-800 rounded-3xl'>
+        
+        <div className='flex flex-col pt-[1rem] bg-gray-800 rounded-2xl w-full gap-4' style={{backgroundColor: color}}>
 
-        <div className='flex flex-col w-full p-4 gap-4' style={{backgroundColor: color}}>
-            <input type="text" name="hue" id="hue" defaultValue={"#"} maxLength={7} className='p-2 border-2 border-gray-700 rounded-3xl' onChange={ (event) => setColor(event.target.value) } />
-            <a href="#" onClick={ () => props.addHue(color)  } className="btn bg-white border-2 border-gray-700 rounded-2xl text-gray-700 text-center">Post</a>
+          <div className="relative m-4 mr-6">
+            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pb-6 pointer-events-none">
+              <svg className="w-6 h-6 mb-[2.75rem] text-lg text-gray-700" aria-hidden="true" fill="none" viewBox="0 0 20 20">
+                <FaHashtag />
+              </svg>
+            </div>
+            <input type="text" name="hue" id="hue" maxLength={6} minLength={6} placeholder='Hexcode' className='pl-[2.5rem] p-2 text-xl border-3 border-gray-700 hover:border-gray-700 rounded-3xl' onChange={ (event) => setColor(`#` + `${event.target.value}`) } ></input>
+            <button onClick={ () => props.addHue(color)  } className="btn w-[15rem] p-1 m-4 ml-[0.75rem] bg-white border-2 border-gray-500 rounded-2xl text-gray-700 text-center">Post</button>
+          </div>
+            
+            
         </div>
 
-        <Hue hue={ {color, username:"kaylee", likes:3, isLiked:false, id:0}} />
+        <Hue hue={ {color, username:"kavery", likes:0, isLiked:false, id:0}} />
 
     </div>
   )

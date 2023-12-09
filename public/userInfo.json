@@ -1,0 +1,7 @@
+{
+    "username": "kavery",
+    "likes": 58,
+    "hues": [
+        {"id": 5, "color": "#beefed", "username": "kavery", "likes": 55, "isLiked":false},
+        {"id": 6, "color": "#facade", "username": "kavery", "likes": 3, "isLiked":false} 
+    ]}

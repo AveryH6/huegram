@@ -1,16 +1,17 @@
 .palette {
     
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(4, 1fr);
+    min-width: 200px;
     width: 100%;
     aspect-ratio: 1/1;
-    min-width: 200px;
-    border: 1px solid rgb(55 65 81);
-    gap: 2px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap:2px;
+    border: 2px solid rgb(31 41 55);
 
 }
 
-.palette > div {
-    background-color: rgba(255, 242, 242, 0);
+.palette > div 
+{
+    background-color: rgb(31 41 55);
 }

@@ -8,9 +8,6 @@ interface Props {
 }
 
 
-
-
-
 const Hue = ({hue, toggleLike}: Props) => {
 
   const r_num = Number("0x" + hue.color.slice(1, 3));
@@ -21,9 +18,10 @@ const Hue = ({hue, toggleLike}: Props) => {
 
   const text_color = hue_intensity > 186 ? "#000000" : "#FFFFFF";
 
+
   return (
     <div
-      className="flex flex-col h-64 aspect-square rounded-3xl justify-between"
+      className="flex flex-col h-64 w-fit aspect-square rounded-3xl justify-between"
       style={{ backgroundColor: hue.color, color: text_color }}
     >
 
@@ -32,7 +30,7 @@ const Hue = ({hue, toggleLike}: Props) => {
         <p className={`text-${text_color} text-2xl opacity-80`}>{hue.color}</p>
         
         
-        <button className='text-3xl text-red-500' onClick={ () => toggleLike && toggleLike(hue.id) }>{hue.isLiked ? <span><FaHeart /></span> : <span><FaRegHeart /></span>}</button>
+        <button className='text-3xl ' onClick={ () => toggleLike && toggleLike(hue.id) }>{hue.isLiked ? <span className='bg-gradient-to-r from-rose-500 via-red-400 to-red-500 inline-block text-red-500 bg-clip-text'><FaHeart /></span> : <span className={`text-${text_color}`}><FaRegHeart /></span>}</button>
         
         
 
@@ -40,8 +38,10 @@ const Hue = ({hue, toggleLike}: Props) => {
         
 
 
-      <div className={`bg-black text-white flex w-full text-center justify-center p-4 rounded-b-2xl opacity-95`}>
+      <div className={`bg-gray-900 text-white flex w-full text-center justify-between p-4 rounded-b-2xl opacity-95`}>
         <p className="text-xl">{hue.username}</p>
+
+        <p>{hue.likes}</p>
 
       </div>
     </div>

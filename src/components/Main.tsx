@@ -10,8 +10,8 @@ interface Props {
 
 const Main = ({hues, addHue, toggleLike} : Props) => {
   return (
-    <div className='flex flex-row overflow-y-auto'>
-        <div className='mt-[8rem] ml-16'>
+    <div className='flex flex-row mt-24 overflow-y-auto'>
+        <div className='flex items-center m-14'>
           <PostHue addHue={addHue}/>
         </div>
 
@@ -21,6 +21,7 @@ const Main = ({hues, addHue, toggleLike} : Props) => {
                 <Hue hue={hue} toggleLike={toggleLike}/>
           ))}
         </div>
+
 
     </div>
     

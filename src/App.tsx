@@ -8,23 +8,25 @@ function App() {
 
   const [hues, setHues] = useState<HueObject[]>([]);
 
-  useEffect( ()=>
-  {
-    fetch('./sampleData.json')
-    .then( res => res.json() )
-    .then( data => setHues(data) ) 
-  }, [])
-
   const [currentUser] = useState({
     username: "kavery",
     likes: 58,
     hues: [ {id:36, color:'#ffa510', username:"kavery", likes: 15}]
   });
 
+  useEffect( ()=>
+  {
+    fetch('./hues.json')
+    .then( res => res.json() )
+    .then( data => setHues(data) ) 
+  }, [])
+
+
+
   const addNewHue = (color:string ) => 
   {
       console.log(color)
-      const newHue = {color, username: currentUser.username, id: length+1 , likes:0, isLiked: false};
+      const newHue = {color, username: currentUser.username, id: hues.length+1 , likes:0, isLiked: false};
       setHues( [newHue, ...hues ] );
   }
 
@@ -38,15 +40,20 @@ function App() {
       hue.isLiked = !hue.isLiked
       setHues(newHues)
     }
+    if(hue?.isLiked){
+      hue.likes + 1
+    }
+
+
   }
 
 
 
   return (
-    <div className='flex bg-slate-900 h-screen'>
+    <span className='flex bg-gradient-to-br from-gray-800 via-gray-950 to-black h-screen fixed'>
       
       <div className="flex flex-col">
-        <Menu/>
+        <div className='fixed top-0 z-1 w-full'><Menu/></div>
 
         <Main hues={hues} addHue = {addNewHue} toggleLike = {toggleLikeforHue}/>
 
@@ -54,7 +61,7 @@ function App() {
       
 
       <Profile />
-    </div>
+    </span>
   )
 }
 
