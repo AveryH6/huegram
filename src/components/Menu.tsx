@@ -1,7 +1,14 @@
+import { useState } from "react";
 import { FaHashtag } from "react-icons/fa";
 
+interface Props {
+  searchHues: (color: string) => void;
+}
 
-const Menu = () => {
+
+const Menu = ({searchHues} : Props) => {
+  const [c, setC] = useState("")
+
   return (
     <section className='flex flex-col w-fill h-[6rem]'>
         
@@ -20,19 +27,14 @@ const Menu = () => {
                         <FaHashtag />
                       </svg>
                   </div>
-                  <input type="search" id="search" className="block w-[17rem] p-4 ps-10 text-sm text-gray-900 border border-orange-500 rounded-3xl bg-gray-50 focus:ring-orange-500 focus:border-red-500" placeholder="Search Hexcode" required/>
-                  <button type="submit" className="text-white absolute end-2.5 p-4 bottom-2.5 bg-fuchsia-500 hover:bg-fuchsia-700 focus:ring-4 focus:outline-none focus:ring-fuchsia-900 font-medium rounded-3xl text-sm px-4 py-2">Search</button>
+                  <input onChange={(e) => setC(e.target.value)} type="search" id="search" className="block w-[17rem] p-4 ps-10 text-sm text-gray-900 border border-orange-500 rounded-3xl bg-gray-50 focus:ring-orange-500 focus:border-red-500" placeholder="Search Hexcode" required/>
+                  <button onClick={() => searchHues(c)} type="submit" className="text-white absolute end-2.5 p-4 bottom-2.5 bg-fuchsia-500 hover:bg-fuchsia-700 focus:ring-4 focus:outline-none focus:ring-fuchsia-900 font-medium rounded-3xl text-sm px-4 py-2">Search</button>
               </div>
           </form>
           
         </div>
 
-        <div className="flex w-full bg-[#151515] h-0.5"></div>
-
-        
-
-
-        
+        <div className="flex w-full bg-[#151515] h-0.5"></div>     
         
     </section>
 

@@ -13,7 +13,7 @@ const PostHue = (props:Props) => {
     const[color, setColor] = useState('')
 
   return (
-    <div className='flex flex-col w-fit h-fit p-8 justify-evenly items-center gap-8 border-2 border-gray-800 rounded-3xl'>
+    <section className='flex flex-col w-[23.5rem] h-fit p-8 justify-evenly items-center gap-8 border-2 border-gray-800 rounded-3xl'>
         
         <div className='flex flex-col pt-[1rem] bg-gray-800 rounded-2xl w-full gap-4' style={{backgroundColor: color}}>
 
@@ -32,7 +32,7 @@ const PostHue = (props:Props) => {
 
         <Hue hue={ {color, username:"kavery", likes:0, isLiked:false, id:0}} />
 
-    </div>
+    </section>
   )
 }
 

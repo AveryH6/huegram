@@ -7,12 +7,12 @@ import { useState, useEffect } from 'react'
 function App() {
 
   const [hues, setHues] = useState<HueObject[]>([]);
-
   const [currentUser] = useState({
     username: "kavery",
     likes: 58,
     hues: [ {id:36, color:'#ffa510', username:"kavery", likes: 15}]
   });
+
 
   useEffect( ()=>
   {
@@ -20,6 +20,13 @@ function App() {
     .then( res => res.json() )
     .then( data => setHues(data) ) 
   }, [])
+
+  // useEffect( () => 
+  // {
+  //   fetch('./userInfo.json')
+  //   .then(res => res.json())
+  //   .then(data => setUser(data))
+  // }, [])
 
 
 
@@ -29,6 +36,7 @@ function App() {
       const newHue = {color, username: currentUser.username, id: hues.length+1 , likes:0, isLiked: false};
       setHues( [newHue, ...hues ] );
   }
+
 
   //Like button
   const toggleLikeforHue = (id?:number) => 
@@ -40,11 +48,14 @@ function App() {
       hue.isLiked = !hue.isLiked
       setHues(newHues)
     }
-    if(hue?.isLiked){
-      hue.likes + 1
-    }
+    
 
+  }
 
+  const searchHues = (colors:string) => {
+    const newHues = [...hues];
+    const hue = newHues.filter(h => h.color == colors)
+    setHues(hue)
   }
 
 
@@ -53,14 +64,14 @@ function App() {
     <span className='flex bg-gradient-to-br from-gray-800 via-gray-950 to-black h-screen fixed'>
       
       <div className="flex flex-col">
-        <div className='fixed top-0 z-1 w-full'><Menu/></div>
+        <div className='fixed top-0 z-1 w-full'><Menu searchHues={searchHues}/></div>
 
-        <Main hues={hues} addHue = {addNewHue} toggleLike = {toggleLikeforHue}/>
+        <Main hues={hues} addHue = {addNewHue} toggleLike = {toggleLikeforHue} /> 
 
       </div>
       
 
-      <Profile />
+      <Profile hues={hues} />
     </span>
   )
 }

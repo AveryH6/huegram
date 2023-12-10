@@ -1,16 +1,18 @@
 import Hue from './Hue'
 import HueObject from '../HueObject'
 import PostHue from './PostHue'
+// import Menu from './Menu'
 
 interface Props {
     hues: HueObject[],
     addHue: (color:string) => void,
-    toggleLike?: (id?:number) => void
+    toggleLike?: (id?:number) => void,
+    // searchHues: (color:string) => void
 }
-
-const Main = ({hues, addHue, toggleLike} : Props) => {
+const Main = ({hues, addHue, toggleLike} : Props) => { //searchHues
   return (
     <div className='flex flex-row mt-24 overflow-y-auto'>
+          {/* <Menu searchHues={searchHues}/> */}
         <div className='flex items-center m-14'>
           <PostHue addHue={addHue}/>
         </div>

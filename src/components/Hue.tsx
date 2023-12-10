@@ -1,6 +1,7 @@
 import HueObject from '../HueObject';
 import { FaRegHeart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
+import { FaEllipsisV } from "react-icons/fa";
 
 interface Props {
   hue: HueObject,
@@ -29,8 +30,10 @@ const Hue = ({hue, toggleLike}: Props) => {
 
         <p className={`text-${text_color} text-2xl opacity-80`}>{hue.color}</p>
         
-        
-        <button className='text-3xl ' onClick={ () => toggleLike && toggleLike(hue.id) }>{hue.isLiked ? <span className='bg-gradient-to-r from-rose-500 via-red-400 to-red-500 inline-block text-red-500 bg-clip-text'><FaHeart /></span> : <span className={`text-${text_color}`}><FaRegHeart /></span>}</button>
+        <div className='flex gap-3'>
+          <p className='p-2'>{hue.likes}</p>
+          <button className='text-3xl ' onClick={ () => toggleLike && toggleLike(hue.id) }>{hue.isLiked ? <span className='bg-gradient-to-r from-rose-500 via-red-400 to-red-500 inline-block text-red-500 bg-clip-text'><FaHeart /></span> : <span className={`text-${text_color}`}><FaRegHeart /></span>}</button>
+        </div>
         
         
 
@@ -38,11 +41,10 @@ const Hue = ({hue, toggleLike}: Props) => {
         
 
 
-      <div className={`bg-gray-900 text-white flex w-full text-center justify-between p-4 rounded-b-2xl opacity-95`}>
+      <div className={`bg-gray-900 text-white flex w-full text-center justify-between p-4 rounded-b-2xl`}>
         <p className="text-xl">{hue.username}</p>
 
-        <p>{hue.likes}</p>
-
+        <button className='text-xl pt-1'><FaEllipsisV /></button>
       </div>
     </div>
   );
