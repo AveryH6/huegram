@@ -27,7 +27,7 @@ const Menu = ({searchHues} : Props) => {
                         <FaHashtag />
                       </svg>
                   </div>
-                  <input onChange={(e) => setC(`#` + e.target.value)} type="search" id="search" className="block w-[17rem] p-4 ps-10 text-sm text-gray-900 border border-orange-500 rounded-3xl bg-gray-50 focus:ring-orange-500 focus:border-red-500" placeholder="Search Hexcode" required/>
+                  <input onChange={(e) => setC(`#` + e.target.value)} type="search" id="search" className="block w-[17rem] p-4 ps-10 text-sm text-gray-900 border border-orange-500 rounded-3xl bg-gray-50 focus:ring-orange-500 focus:border-red-500" placeholder="Search Hexcode"/>
                   <button onClick={() => searchHues(c)} type="submit" className="text-white absolute end-2.5 p-4 bottom-2.5 bg-fuchsia-500 hover:bg-fuchsia-700 focus:ring-4 focus:outline-none focus:ring-fuchsia-900 font-medium rounded-3xl text-sm px-4 py-2">Search</button>
               </div>
           </form>
