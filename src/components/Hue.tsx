@@ -30,10 +30,9 @@ const Hue = ({hue, toggleLike}: Props) => {
 
         <p className={`text-${text_color} text-2xl opacity-80`}>{hue.color}</p>
         
-        <div className='flex gap-3'>
-          <p className='p-2'>{hue.likes}</p>
-          <button className='text-3xl ' onClick={ () => toggleLike && toggleLike(hue.id) }>{hue.isLiked ? <span className='bg-gradient-to-r from-rose-500 via-red-400 to-red-500 inline-block text-red-500 bg-clip-text'><FaHeart /></span> : <span className={`text-${text_color}`}><FaRegHeart /></span>}</button>
-        </div>
+       
+        <button className='text-3xl ' onClick={ () => toggleLike && toggleLike(hue.id) }>{hue.isLiked ? <span className='bg-gradient-to-r from-rose-500 via-red-400 to-red-500 inline-block text-red-500 bg-clip-text'><FaHeart /></span> : <span className={`text-${text_color}`}><FaRegHeart /></span>}</button>
+        
         
         
 
