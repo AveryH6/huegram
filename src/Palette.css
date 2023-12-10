@@ -14,4 +14,5 @@
 .palette > div 
 {
     background-color: rgb(31 41 55);
+    gap: 2px;
 }
