@@ -17,7 +17,7 @@ const Profile = ({hues}: Props) => {
   return (
     
     
-    <section className='flex flex-col w-[35rem] mt-16'>
+    <section className='flex flex-col w-[20rem] mt-16'>
         <span className="flex flex-col h-full border-2 border-gray-800 border-r-black border-b-black border-t-black justify-around items-center text-white">
           <div>
             <h1 className='flex pb-2 text-3xl'>@kavery</h1>

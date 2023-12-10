@@ -11,7 +11,7 @@ interface Props {
 }
 const Main = ({hues, addHue, toggleLike} : Props) => { //searchHues
   return (
-    <div className='flex flex-row mt-24 overflow-y-auto'>
+    <div className='flex flex-row w-[70rem] mt-24 overflow-y-auto'>
           {/* <Menu searchHues={searchHues}/> */}
         <div className='flex items-center m-14'>
           <PostHue addHue={addHue}/>
