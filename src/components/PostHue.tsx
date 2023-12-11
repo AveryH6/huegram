@@ -14,13 +14,13 @@ const PostHue = (props:Props) => {
 
   return (
     <section className='flex flex-col w-[23.5rem] h-fit p-8 justify-evenly items-center gap-8 border-2 border-gray-800 rounded-3xl'>
+      <h1 className='text-white text-2xl flex justify-center'>Post New Hue!</h1>
         <div className='flex flex-col pt-[1rem] bg-gray-800 rounded-2xl w-full gap-4' style={{backgroundColor: color}}>
-
           <div className="relative m-6">
-            <h1 className='text-white text-2xl flex justify-center mb-8'>Post New Hue!</h1>
+            
 
 
-            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pb-6 pt-[4rem] pointer-events-none">
+            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pb-6 pointer-events-none">
               <svg className="w-6 h-6 mb-[2rem] text-lg text-gray-700" aria-hidden="true" fill="none" viewBox="0 0 20 20">
                 <FaHashtag />
               </svg>

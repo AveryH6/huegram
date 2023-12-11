@@ -1,7 +1,6 @@
 import HueObject from '../HueObject';
 import { FaRegHeart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
-import { FaEllipsisV } from "react-icons/fa";
 
 interface Props {
   hue: HueObject,
@@ -43,7 +42,6 @@ const Hue = ({hue, toggleLike}: Props) => {
       <div className={`bg-gray-900 text-white flex w-full text-center justify-between p-4 rounded-b-2xl`}>
         <p className="text-xl">{hue.username}</p>
 
-        <button className='text-xl pt-1'><FaEllipsisV /></button>
       </div>
     </div>
   );
